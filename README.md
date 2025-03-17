@@ -38,5 +38,7 @@ make
 ./genxyz <box-size> <density> <file-name.xyz>
 
 # calculate energy of generated file
-./readxyz
+./readxyz <box-size> <position.xyz> [velocity.xyz] [--pure_output]
 ```
+
+`time_simulations` runs `readxyz` over a range of parameters, and results can be plotted using `plot_results.py`.
