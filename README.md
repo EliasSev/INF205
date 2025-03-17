@@ -28,7 +28,7 @@ make
 (`<...>` is a required arguemnt, `[...]` is an optional argument).
 
 ## Worksheet 3
-This worksheet extends the previous worksheet. A program for generatring molecule position files is implemented (`genxyz`). In addition, `readxyz` now assumes periodic boundary conditions, a linked-cell data structure is implemented, and heuristics are included for data-structure selection.
+This worksheet extends the previous worksheet. A program for generatring molecule position files is implemented (`genxyz`). In addition, `readxyz` now assumes periodic boundary conditions, a linked-cell data structure is implemented, and heuristics are included for data-structure selection. The speed-up due to the linked-cell structure is calculated and included in the results.
 
 ```bash
 # compile the code
@@ -41,4 +41,4 @@ make
 ./readxyz <box-size> <position.xyz> [velocity.xyz] [--pure_output]
 ```
 
-`time_simulations` runs `readxyz` over a range of parameters, and results can be plotted using `plot_results.py`.
+`time_simulations` runs `readxyz` over a range of parameters, measuring the speed-up from the two different data-structure implementations, and results can be plotted using `plot_results.py`.
